@@ -7,7 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainLayoutComponent } from './shared/main-layout/main-layout.component';
 import { SearchComponent } from './search/search.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
-import {MatInputModule} from '@angular/material/input';
+import { MatInputModule } from '@angular/material/input';
+import { FlexLayoutModule } from '@angular/flex-layout';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,10 +19,10 @@ import {MatInputModule} from '@angular/material/input';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatInputModule
-    
+    MatInputModule,
+    FlexLayoutModule
   ],
-  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
